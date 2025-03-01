@@ -7,7 +7,8 @@
         "dev": "vite",
         "format": "prettier --write resources/",
         "format:check": "prettier --check resources/",
-        "lint": "eslint . --fix",
+        "lint:check": "eslint .",
+        "lint:fix": "eslint . --fix",
         "prepare": "husky || true",
         "typecheck": "tsc --noEmit"
     },
