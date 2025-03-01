@@ -8,7 +8,8 @@
         "format": "prettier --write resources/",
         "format:check": "prettier --check resources/",
         "lint": "eslint . --fix",
-        "types": "tsc --noEmit"
+        "prepare": "husky || true",
+        "typecheck": "tsc --noEmit"
     },
     "devDependencies": {
         "@eslint/js": "^9.19.0",
@@ -16,6 +17,8 @@
         "eslint-config-prettier": "^10.0.1",
         "eslint-plugin-react": "^7.37.3",
         "eslint-plugin-react-hooks": "^5.1.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.4.3",
         "prettier": "^3.4.2",
         "prettier-plugin-organize-imports": "^4.1.0",
         "prettier-plugin-tailwindcss": "^0.6.11",
