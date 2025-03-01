@@ -21,6 +21,16 @@ export interface NavItem {
     isActive?: boolean;
 }
 
+export interface RoomType {
+    id: number;
+    code: string;
+    name: string;
+    description: string | null;
+    rooms_count: number;
+    created_at: string;
+    updated_at: string;
+}
+
 export interface SharedData {
     name: string;
     quote: { message: string; author: string };
