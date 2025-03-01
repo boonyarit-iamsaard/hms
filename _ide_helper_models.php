@@ -17,6 +17,61 @@ namespace App\Models{
  *
  * @property int $id
  * @property string $name
+ * @property int|null $room_type_id
+ * @property string|null $room_type_name
+ * @property string|null $room_type_code
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\RoomType|null $roomType
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room whereRoomTypeCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room whereRoomTypeId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room whereRoomTypeName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Room whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
+	#[\AllowDynamicProperties]
+	final class IdeHelperRoom {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $code
+ * @property string $name
+ * @property string|null $description
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Room> $rooms
+ * @property-read int|null $rooms_count
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType whereCode($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|RoomType whereUpdatedAt($value)
+ * @mixin \Eloquent
+ */
+	#[\AllowDynamicProperties]
+	final class IdeHelperRoomType {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property string $name
  * @property string $email
  * @property \Illuminate\Support\Carbon|null $email_verified_at
  * @property string $password
